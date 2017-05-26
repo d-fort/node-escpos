@@ -31,20 +31,18 @@ const device  = new escpos.USB();
 const printer = new escpos.Printer(device);
 
 device.open(function(){
-
   printer
   .font('a')
-  .align('ct')
-  .style('bu')
-  .size(1, 1)
-  .text('The quick brown fox jumps over the lazy dog')
-  .text('敏捷的棕色狐狸跳过懒狗')
-  .barcode('12345678', 'EAN8')
-  .qrimage('https://github.com/song940/node-escpos', function(err){
-    this.cut();
-    this.close();
-  });
-
+  .then(context => context.align('ct'))
+  .then(context => context.style('bu'))
+  .then(context => context.size(1, 1))
+  .then(context => context.text('The quick brown fox jumps over the lazy dog'))
+  .then(context => context.text('敏捷的棕色狐狸跳过懒狗'))
+  .then(context => context.barcode('12345678', 'EAN8'))
+  .then(context => context.qrimage('https://github.com/song940/node-escpos'))
+  .then(context => context.cut())
+  .then(context => context.close())
+  .catch(context => context.close())
 });
 
 
