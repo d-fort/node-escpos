@@ -1,32 +1,31 @@
 {
-   "name": "@zapperadmin/escpos",
-   "version": "0.0.0",
-   "description": "ESC/POS Printer driver for nodejs",
-   "main": "index.js",
-   "scripts": {
-      "test": "mocha"
-   },
-   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/d-fort/node-escpos.git"
-   },
-   "keywords": [
-      "escpos",
-      "printer"
-   ],
-   "license": "MIT",
-   "homepage": "https://github.com/d-fort/node-escpos#readme",
-   "dependencies": {
-      "iconv-lite": "*",
-      "mutable-buffer": "*"
-   },
-   "optionalDependencies": {
-      "get-pixels": "*",
-      "serialport": "*",
-      "qr-image": "*",
-      "usb": "*"
-   },
-   "devDependencies": {
-      "mocha": "*"
-   }
+  "name": "@zapperadmin/escpos",
+  "version": "0.0.5",
+  "description": "ESC/POS Printer driver for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-fort/node-escpos.git"
+  },
+  "keywords": [
+    "escpos",
+    "printer"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/d-fort/node-escpos#readme",
+  "dependencies": {
+    "iconv-lite": "*",
+    "mutable-buffer": "*"
+  },
+  "optionalDependencies": {
+    "get-pixels": "*",
+    "serialport": "*",
+    "qr-image": "*"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
 }

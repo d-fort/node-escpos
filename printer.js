@@ -468,7 +468,7 @@ Printer.prototype.close = function () {
           resolve();
         }
       });
-    });
+    }).catch(err => { reject(err) });
   });
 };
 
